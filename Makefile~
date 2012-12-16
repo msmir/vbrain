@@ -891,7 +891,6 @@ revomini_short         := 'rm  '
 simposix_short         := 'posx'
 osd_short              := 'osd '
 vbrain_short           := 'vb  '
-fy20_short             := 'fy20'
 
 # Start out assuming that we'll build fw, bl and bu for all boards
 FW_BOARDS  := $(ALL_BOARDS)

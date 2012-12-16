@@ -389,9 +389,9 @@ static void SensorsTask(void *parameters)
 		if (PIOS_HMC5883_NewDataAvailable() || PIOS_DELAY_DiffuS(mag_update_time) > 150000) {
 			int16_t values[3];
 			PIOS_HMC5883_ReadMag(values);
-			float mags[3] = {(float) values[1] * mag_scale[0] - mag_bias[0],
-			                (float) values[0] * mag_scale[1] - mag_bias[1],
-			                -(float) values[2] * mag_scale[2] - mag_bias[2]};
+			float mags[3] = {-(float) values[1] * mag_scale[0] - mag_bias[0],
+			                 -(float) values[0] * mag_scale[1] - mag_bias[1],
+			                 -(float) values[2] * mag_scale[2] - mag_bias[2]};
 			if (rotate) {
 				float mag_out[3];
 				rot_mult(R, mags, mag_out);

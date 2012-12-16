@@ -76,7 +76,7 @@ endif
 endif
 
 # List of modules to include
-MODULES = Sensors Attitude/revolution ManualControl Stabilization Actuator
+MODULES = Sensors/vbrain Attitude/revolution ManualControl Stabilization Actuator
 MODULES += Altitude/revolution FirmwareIAP
 MODULES += Airspeed/revolution
 MODULES += GPS AltitudeHold VtolPathFollower FixedWingPathFollower PathPlanner

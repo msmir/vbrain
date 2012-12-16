@@ -34,41 +34,37 @@
 
 #include "pios.h"
 
-#define MPU6000_REV_C                           0x14
-#define MPU6000_REV_D                           0x58
-                                                        // Product ID Description for MPU6000
-                                                        // high 4 bits          low 4 bits
-     	 	 	 	 	 	 	 	 	 	 	 	 	// Product Name Product Revision
-#define MPU6000ES_REV_C4                        0x14    // 0001                 0100
-#define MPU6000ES_REV_C5                        0x15    // 0001                 0101
-#define MPU6000ES_REV_D6                        0x16    // 0001                 0110
-#define MPU6000ES_REV_D7                        0x17    // 0001                 0111
-#define MPU6000ES_REV_D8                        0x18    // 0001                 1000
-#define MPU6000_REV_C4                          0x54    // 0101                 0100
-#define MPU6000_REV_C5                          0x55    // 0101                 0101
-#define MPU6000_REV_D6                          0x56    // 0101                 0110
-#define MPU6000_REV_D7                          0x57    // 0101                 0111
-#define MPU6000_REV_D8                          0x58    // 0101                 1000
-#define MPU6000_REV_D9                          0x59    // 0101                 1001
-
-
+#define MPU6000_REV_C                     0x14
+#define MPU6000_REV_D                     0x58
+// Product ID Description for MPU6000
+                                                  // high 4 bits    low 4 bits
+// Product Name Product Revision
+#define PIOS_MPU6000ES_REV_C4             0x14    // 0001                 0100
+#define PIOS_MPU6000ES_REV_C5             0x15    // 0001                 0101
+#define PIOS_MPU6000ES_REV_D6             0x16    // 0001                 0110
+#define PIOS_MPU6000ES_REV_D7             0x17    // 0001                 0111
+#define PIOS_MPU6000ES_REV_D8             0x18    // 0001                 1000
+#define PIOS_MPU6000_REV_C4               0x54    // 0101                 0100
+#define PIOS_MPU6000_REV_C5               0x55    // 0101                 0101
+#define PIOS_MPU6000_REV_D6               0x56    // 0101                 0110
+#define PIOS_MPU6000_REV_D7               0x57    // 0101                 0111
+#define PIOS_MPU6000_REV_D8               0x58    // 0101                 1000
+#define PIOS_MPU6000_REV_D9               0x59    // 0101                 1001
 
 /* MPU6000 Addresses */
-#define MPUREG_XG_OFFS_TC                               0x00
-#define MPUREG_YG_OFFS_TC                               0x01
-#define MPUREG_ZG_OFFS_TC                               0x02
-#define MPUREG_X_FINE_GAIN                              0x03
-#define MPUREG_Y_FINE_GAIN                              0x04
-#define MPUREG_Z_FINE_GAIN                              0x05
-#define MPUREG_XA_OFFS_H                                0x06    // X axis accelerometer offset (high byte)
-#define MPUREG_XA_OFFS_L                                0x07    // X axis accelerometer offset (low byte)
-#define MPUREG_YA_OFFS_H                                0x08    // Y axis accelerometer offset (high byte)
-#define MPUREG_YA_OFFS_L                                0x09    // Y axis accelerometer offset (low byte)
-#define MPUREG_ZA_OFFS_H                                0x0A    // Z axis accelerometer offset (high byte)
-#define MPUREG_ZA_OFFS_L                                0x0B    // Z axis accelerometer offset (low byte)
-
-#define PIOS_MPU6000_MPUREG_PRODUCT_ID    0x0C    // Product ID Register
-/* MPU6000 Addresses */
+#define PIOS_MPU6000_XG_OFFS_TC           0x00
+#define PIOS_MPU6000_YG_OFFS_TC           0x01
+#define PIOS_MPU6000_ZG_OFFS_TC           0x02
+#define PIOS_MPU6000_X_FINE_GAIN          0x03
+#define PIOS_MPU6000_Y_FINE_GAIN          0x04
+#define PIOS_MPU6000_Z_FINE_GAIN          0x05
+#define PIOS_MPU6000_XA_OFFS_H            0x06    // X axis accelerometer offset (high byte)
+#define PIOS_MPU6000_XA_OFFS_L            0x07    // X axis accelerometer offset (low byte)
+#define PIOS_MPU6000_YA_OFFS_H            0x08    // Y axis accelerometer offset (high byte)
+#define PIOS_MPU6000_YA_OFFS_L            0x09    // Y axis accelerometer offset (low byte)
+#define PIOS_MPU6000_ZA_OFFS_H            0x0A    // Z axis accelerometer offset (high byte)
+#define PIOS_MPU6000_ZA_OFFS_L            0x0B    // Z axis accelerometer offset (low byte)
+#define PIOS_MPU6000_PRODUCT_ID    		  0x0C    // Product ID Register
 #define PIOS_MPU6000_SMPLRT_DIV_REG       0X19
 #define PIOS_MPU6000_DLPF_CFG_REG         0X1A
 #define PIOS_MPU6000_GYRO_CFG_REG         0X1B

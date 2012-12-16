@@ -162,8 +162,8 @@ static void PIOS_MPU6000_Config(struct pios_mpu6000_cfg const * cfg)
 #if defined(PIOS_MPU6000_ACCEL)
 	_product_id = PIOS_MPU6000_Read_PRODUCT_ID();
 
-	if ((_product_id == MPU6000ES_REV_C4) || (_product_id == MPU6000ES_REV_C5) ||
-	                (_product_id == MPU6000_REV_C4)   || (_product_id == MPU6000_REV_C5)){
+	if ((_product_id == PIOS_MPU6000ES_REV_C4) || (_product_id == PIOS_MPU6000ES_REV_C5) ||
+	                (_product_id == PIOS_MPU6000_REV_C4)   || (_product_id == PIOS_MPU6000_REV_C5)){
 	                // Accel scale 8g (4096 LSB/g)
 	                // Rev C has different scaling than rev D
 	                while (PIOS_MPU6000_SetReg(PIOS_MPU6000_ACCEL_CFG_REG, 1<<3) != 0);
@@ -322,7 +322,7 @@ int32_t PIOS_MPU6000_ReadID()
 
 int32_t PIOS_MPU6000_Read_PRODUCT_ID()
 {
-	int32_t mpu6000_pid = PIOS_MPU6000_GetReg(PIOS_MPU6000_MPUREG_PRODUCT_ID);
+	int32_t mpu6000_pid = PIOS_MPU6000_GetReg(PIOS_MPU6000_PRODUCT_ID);
 //	if(mpu6000_id < 0)
 //		return -1;
 	return mpu6000_pid;
